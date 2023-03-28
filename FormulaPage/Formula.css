@@ -1,0 +1,292 @@
+body {
+    background-color: #FFD8BE;
+    -webkit-background-color: #FFD8BE;
+    display: block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 99%;
+    height: 99%;
+    -webkit-width: 99%;
+    -webkit-height: 99%;
+    margin: 0;
+    padding: 0;
+}
+
+#ReturnButton{
+    position: absolute;
+    top: 0%;
+    left: 99%;
+    transform: translateX(-99%);
+    z-index: 1000;
+}
+
+#ReturnButton svg{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+nav {
+    margin-top: 25px;
+    position: relative;
+    width: 100%;
+    height: 75px;
+    /* background: black; */
+}
+
+#ViewerContainer{
+    margin: 0;
+    padding: 0;
+    /* background: white; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+}
+
+#ViewerContainer #FViewer{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: aquamarine;
+    border-style:ridge;
+}
+
+#ViewerContainer #FView {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ViewerContainer #FResultViewer {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: xx-large;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ViewerContainer #Keyboard{
+    display:block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    width: 100%;
+    height: 30%;
+    background: white;
+    /* padding-top: 10px; */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#ViewerContainer #Keyboard #KeyCapContainer{
+    display:grid;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 99%;
+    height: 100%;
+
+    grid-template-rows: repeat(4,1fr);
+    
+    box-sizing: border-box;
+}
+
+#NumberContainer{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 1;
+    column-gap: 3px;
+}
+#OperatorContainer{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 1;
+    column-gap: 3px;
+}
+#AdvContainer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1;
+    column-gap: 3px;
+}
+#FunctionContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    column-gap: 3px;
+}
+
+#ViewerContainer #Keyboard button{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    font-size:large;
+    box-sizing: border-box;
+    background: white;
+    /* margin-top: 10px; */
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#Keyboard button span {
+    /* background: black; */
+    pointer-events: none;
+}
+
+#Keyboard #equal{
+    grid-column-start: 3;
+    grid-column-end: 8;
+}
+#Keyboard .BasicCalculation{
+    background: rgb(250, 125, 125)!important;
+}
+#Keyboard .Function{
+    background: rgb(166, 255, 252)!important;
+}
+
+nav #SearchContainer{
+    height: 100%;
+    width: 50%;
+    /* background: white; */
+}
+
+nav #Search{
+    width: 100%;
+    height: 75%;
+    border-radius: 40px;
+    outline: none;
+    border-style: solid;
+    border-width: 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color:aquamarine;
+    box-sizing: border-box;
+    font-size: 100%;
+    padding-left: 20px;
+}
+
+nav #DeleteBtn{
+    background-image: url(XImage.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    float: right;
+    left: 52.5%;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+nav #SelectionMenu{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform:translateY(-50%);
+    width: 75px;
+    height: 100%;
+    /* background: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor:pointer;
+    z-index:100;
+}
+
+nav #SelectionMenu div{
+    width: 100%;
+    height: 15.5%;
+    background: black;
+}
+
+
+
+aside {
+    display: none;
+    /* opacity: 0; */
+    position: fixed;
+    /* box-sizing:border-box; */
+    right: 0%;
+    width: 20%;
+    height: 90%;
+    background: #e7e9eb;
+    transition: opacity 0.25s;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+aside .Alphabet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#AddFormula {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1280px){
+    nav #SearchContainer{
+        height: 100%;
+        width: 100%;
+        /* background: white; */
+    }
+    nav #Search{
+    width: 50%;
+    height: 75%;
+    border-radius: 40px;
+    outline: none;
+    border-style: solid;
+    border-width: 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color:aquamarine;
+    font-size: 100%;
+    padding-left: 20px;
+    }
+
+    nav #DeleteBtn{
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translateY(-50%);
+    }
+
+
+}
+@media only screen and (max-width: 610px){
+    #FName p{
+        font-size: xx-large;
+    }
+}

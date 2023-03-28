@@ -1,0 +1,42 @@
+#Searching-bar {
+    position: absolute;
+    background-color: #c7ceea;
+    width: 99.5%;
+    height: 45px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%,100%);
+}
+
+#Searching-bar #inp{
+    width: 30%;
+    height: 50%;
+    border-radius: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #b2b297;
+    padding-left: 40px;
+    outline: none;
+    background-image: url(Kinh_Lup.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    /* margin-left: 8%; */
+    position:absolute;
+    top: 50%;
+    left: 8%;
+    transform: translate(-8%,-50%);
+    transition: width 1s;
+}
+
+
+
+@media only screen and (max-width: 1280px) {
+    #Searching-bar #inp {
+        left: 5%;
+        transform: translate(-5%,-50%);
+        background-image: none;
+        padding-left: 2%;
+    }
+}

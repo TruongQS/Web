@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="326217493_1680441405704492_2134766713281557876_n-removebg-preview-2.png" />
+    <link rel="stylesheet" href="Formula.css">
+    <title>Calculator</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div id="ReturnButton" onclick="history.go(-1)">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160.3px"
+        height="86.1px" viewBox="0 0 160.3 86.1" style="enable-background:new 0 0 160.3 86.1;" xml:space="preserve">
+            <style type="text/css">
+                .st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+            </style>
+            <defs>
+            </defs>
+            <polygon class="st0" points="159.5,43.1 108.5,85.1 108.5,62.1 0.5,62.1 0.5,24.1 108,24.1 108,1.1 "/>
+        </svg>
+    </div>
+    <!-- <nav>
+        <div id="SearchContainer">
+            <input type="text" id="Search" placeholder="Search for Formula Name 🔎">
+            <div id="DeleteBtn"></div>
+        </div>
+        <div id="SelectionMenu">
+            <div id="path1"></div>
+            <div id="path2"></div>
+            <div id="path3"></div>
+        </div>
+    </nav> -->
+    <article id="ViewerContainer">
+        <div id="FViewer">
+            <header>
+                <p id="FView"></p>
+            </header>
+            <article>
+                <p id="FResultViewer"></p>
+            </article>
+        </div>
+        <footer id="Keyboard">
+            <div id="KeyCapContainer">
+                <div id="NumberContainer">
+                    <button id="number1" class="number" value="1" type="submit"><span>1</span></button>
+                    <button id="number2" class="number" value="2" type="submit"><span>2</span></button>
+                    <button id="number3" class="number" value="3" type="submit"><span>3</span></button>
+                    <button id="number4" class="number" value="4" type="submit"><span>4</span></button>
+                    <button id="number5" class="number" value="5" type="submit"><span>5</span></button>
+                    <button id="number6" class="number" value="6" type="submit"><span>6</span></button>
+                    <button id="number7" class="number" value="7" type="submit"><span>7</span></button>
+                    <button id="number8" class="number" value="8" type="submit"><span>8</span></button>
+                    <button id="number9" class="number" value="9" type="submit"><span>9</span></button>
+                    <button id="number0" class="number" value="0" type="submit"><span>0</span></button>
+                </div>
+                <div id="OperatorContainer">
+                    <button value="+" class="BasicCalculation" id="plus"><span>\(+\)</span></button>
+                    <button value="-" class="BasicCalculation" id="minus"><span>\(-\)</span></button>
+                    <button value="*" class="BasicCalculation" id="multiple"><span>x</span></button>
+                    <button value="/" class="BasicCalculation" id="division"><span>\(/\)</span></button>
+                    <button value="**" class="BasicCalculation" id="exponent "><span>^</span></button>
+                    <button value="(" class="BasicCalculation" id="openBracket"><span>\((\)</span></button>
+                    <button value=")" class="BasicCalculation" id="closeBracket"><span>\()\)</span></button>
+                    <button value="." class="BasicCalculation" id="dots"><span>\(.\)</span></button>
+                </div>
+                <div id="AdvContainer">
+                    <button id="sqrt" class="AdvCalculation" ><span>\(\sqrt{x}\)</span></button>
+                    <button id="xsqrt" class="AdvCalculation" ><span>\(\sqrt[y]{x}\)</span></button>
+                    <button id="pow2" class="AdvCalculation" ><span>\(x^2\)</span></button>
+                    <button id="pow3" class="AdvCalculation" ><span>\(x^3\)</span></button>
+                    <button id="powx" class="AdvCalculation" ><span>\(x^y\)</span></button>
+                    <!-- <button id="arrangement" class="AdvCalculation" >nPr</button>
+                    <button id="combinatorics" class="AdvCalculation">nCr</button> -->
+                </div>
+                <div id="FunctionContainer">
+                    <button class="Function" id="Delete">\(Delete\)</button>
+                    <!-- <button class="Function" id="equal">\(=\)</button> -->
+                    <button class="Function" id="Clear">\(Clear\)</button>
+                </div>
+            </div>
+        </footer>
+    </article>
+    <aside id="FMenu">
+
+        <h3 class="Alphabet" id="A">A</h3>
+        <h3 class="Alphabet" id="B">B</h3>
+        <h3 class="Alphabet" id="C">C</h3>
+        <h3 class="Alphabet" id="D">D</h3>
+        <h3 class="Alphabet" id="E">E</h3>
+        <h3 class="Alphabet" id="F">F</h3>
+        <h3 class="Alphabet" id="G">G</h3>
+        <h3 class="Alphabet" id="H">H</h3>
+        <h3 class="Alphabet" id="I">I</h3>
+        <h3 class="Alphabet" id="J">J</h3>
+        <h3 class="Alphabet" id="K">K</h3>
+        <h3 class="Alphabet" id="L">L</h3>
+        <h3 class="Alphabet" id="M">M</h3>
+        <h3 class="Alphabet" id="N">N</h3>
+        <h3 class="Alphabet" id="O">O</h3>
+        <h3 class="Alphabet" id="P">P</h3>
+        <h3 class="Alphabet" id="Q">Q</h3>
+        <h3 class="Alphabet" id="R">R</h3>
+        <h3 class="Alphabet" id="S">S</h3>
+        <h3 class="Alphabet" id="T">T</h3>
+        <h3 class="Alphabet" id="U">U</h3>
+        <h3 class="Alphabet" id="V">V</h3>
+        <h3 class="Alphabet" id="W">W</h3>
+        <h3 class="Alphabet" id="X">X</h3>
+        <h3 class="Alphabet" id="Y">Y</h3>
+        <h3 class="Alphabet" id="Z">Z</h3>
+        <h3 class="Alphabet" id="*">*</h3>
+        <h3 id="AddFormula">Tạo hàm riêng của bạn</h3>
+        <script src="FMenuScript/FMenu.js"></script>
+    </aside>
+    
+    <script src="Mainjs.js"></script>
+    <script src="FormulaWriting.js"></script>
+    <script src="SearchUI.js"></script>
+    <!-- <script src="math-processor.js"></script> -->
+</body>
+</html>

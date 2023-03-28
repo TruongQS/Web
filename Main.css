@@ -1,0 +1,150 @@
+@import url('Search-bar/Menu.css');
+@import url('Search-bar/search-bar.css');
+@import url('Selection/selection.css');
+@font-face {
+    font-family: 'Welcome';
+    src: url('WelcomeRegular.woff2') format('woff2'),
+        url('WelcomeRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-image: url(Images/backgr.jpg);
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    max-height: 99%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#WTextContainer{
+    position: absolute;
+    top: 0%;
+    /* transform: translateY(100%); */
+    width: 100%;
+    height: 95px;
+    /* background: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#WelcomeText {
+    font-size: 115px;
+    font-family: Welcome;
+    animation: WelcomeAnimation 2s linear infinite alternate;
+}
+
+@keyframes WelcomeAnimation {
+    0%{
+        filter: blur(0px);
+        opacity: 1;
+    }
+    50%{
+        filter: blur(0px);
+        opacity: 1;
+    }
+    100%{
+        filter: blur(2.5px);
+        opacity: 0;
+    }
+}
+
+body #iconImg {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transform: translate(-40%,-40%) scale(0.2);
+}
+
+#friend {
+    position: absolute;
+    top: 100%;
+    left: 52.5%;
+    transform: translate(-52.5%,-100%);   
+    display: block;
+}
+
+#Introduction {
+    display:block;
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: red; */
+}
+
+#Introduction #leftArrow {
+    position: absolute;
+    height: 100%;
+    top: -28%;
+    left: 16%;
+    transform: rotate(10deg);
+
+}
+
+#Introduction #rightArrow {
+    position: absolute;
+    height: 100%;
+    top: -28%;
+    right: 16%;
+    transform: scaleX(-1) rotate(10deg);
+}
+
+#Introduction #rightArrow path {
+    transition: stroke-dashoffset 2s;
+}
+
+#Introduction #Minus {
+    position: absolute;
+    right: 32.5%;
+    width:auto;
+    height: 100%;
+}
+
+#Introduction #Plus {
+    position: absolute;
+    left: 32.5%;
+    width:auto;
+    height: 100%;
+}
+
+#X,.P{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    #Introduction {
+        display: none;
+        transition: none;
+    }
+
+    #friend {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 800px)
+{
+    #Introduction {
+        display: none;
+        transition: none;
+    }
+}
+
+@media only screen and (max-width: 745px){
+    #WelcomeText{
+        font-size: 150px ;
+    }
+    #WTextContainer{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
